@@ -16,3 +16,8 @@
 .markdown h3 {
   @apply text-2xl mt-8 mb-4 leading-snug;
 }
+
+.markdown a {
+  @apply underline decoration-dotted underline-offset-4 text-gray-700 font-extralight
+
+}
