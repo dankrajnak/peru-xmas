@@ -13,25 +13,20 @@ type Props = {
 };
 
 export default function Index({ allPosts }: Props) {
-  const heroPost = allPosts[0];
-  const morePosts = allPosts.slice(1);
   return (
     <>
       <Layout>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>{CMS_NAME}</title>
         </Head>
         <Container>
           <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          <HeroPost
+            title="Hey. Let's Hangout"
+            coverImage="/assets/blog/hero.webp"
+            excerpt="It's been a while.  Let's do something together!  Over the past couple weeks, I've been researching stuff to do in Peru.  If I get to see you there, let your part-time travel agent, Dan, organize (and pay for) an experience of your choosing.  If you can't make it down south, then let's do something wherever you show up!"
+          />
+          {allPosts.length > 0 && <MoreStories posts={allPosts} />}
         </Container>
       </Layout>
     </>
