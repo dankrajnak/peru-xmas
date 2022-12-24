@@ -1,8 +1,9 @@
+import { type StaticImageData } from "next/image";
 import CoverImage from "./cover-image";
 
 type Props = {
   title: string;
-  coverImage: string;
+  coverImage: string | StaticImageData;
   excerpt: string;
   slug?: string;
 };

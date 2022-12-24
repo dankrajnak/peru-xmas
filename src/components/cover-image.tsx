@@ -1,10 +1,10 @@
 import cn from "classnames";
 import Link from "next/link";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 type Props = {
   title: string;
-  src: string;
+  src: string | StaticImageData;
   slug?: string;
   priority?: boolean | null;
 };
