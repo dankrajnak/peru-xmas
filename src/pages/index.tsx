@@ -7,6 +7,7 @@ import { getAllPosts } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Post from "../interfaces/post";
+import heroImage from "../../public/assets/blog/hero.webp";
 
 type Props = {
   allPosts: Post[];
@@ -23,7 +24,7 @@ export default function Index({ allPosts }: Props) {
           <Intro />
           <HeroPost
             title="Hey. Let's Hangout"
-            coverImage="/assets/blog/hero.webp"
+            coverImage={heroImage}
             excerpt="It's been a while.  Let's do something together!  Over the past couple weeks, I've been researching stuff to do in Peru.  If I get to see you there, let your part-time travel agent, Dan, organize (and pay for) an experience of your choosing.  If you can't make it down south, then let's do something wherever you show up!"
           />
           {allPosts.length > 0 && <MoreStories posts={allPosts} />}

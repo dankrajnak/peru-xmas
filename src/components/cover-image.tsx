@@ -20,6 +20,7 @@ const CoverImage = ({ title, src, slug, priority }: Props) => {
       width={1300}
       height={630}
       sizes="1300px"
+      placeholder={priority ? "blur" : undefined}
       priority={priority}
     />
   );
