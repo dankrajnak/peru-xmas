@@ -6,9 +6,10 @@ type Props = {
   title: string;
   src: string;
   slug?: string;
+  priority?: boolean | null;
 };
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CoverImage = ({ title, src, slug, priority }: Props) => {
   const image = (
     <Image
       src={src}
@@ -18,7 +19,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
       })}
       width={1300}
       height={630}
-      priority
+      priority={priority}
     />
   );
   return (
